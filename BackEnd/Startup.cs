@@ -1,15 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
+using BackEnd.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.Swagger;
 
 namespace BackEnd
 {
@@ -26,6 +25,23 @@ namespace BackEnd
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+            {
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                {
+                    options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                }
+                else
+                {
+                    options.UseSqlite("Data Source-conference.db");
+                }
+            });
+
+            services.AddSwaggerGen(options =>
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "Workflow Planner API", Version = "v1" });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,6 +61,16 @@ namespace BackEnd
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.UseSwagger();
+            app.UseSwaggerUI(o=> {
+                o.SwaggerEndpoint("/swagger/v1/swagger.json", "Workflow Planner API v1");
+            });
+
+            app.Run(c=> {
+                c.Response.Redirect("/swagger");
+                return Task.CompletedTask;
             });
         }
     }

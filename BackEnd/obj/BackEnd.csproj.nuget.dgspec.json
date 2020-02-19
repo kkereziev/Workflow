@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj": {}
+    "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj": {
+    "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj",
+        "projectUniqueName": "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj",
         "projectName": "BackEnd",
-        "projectPath": "c:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj",
+        "projectPath": "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj",
         "packagesPath": "C:\\Users\\Krum Kereziev\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\obj\\",
+        "outputPath": "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -44,6 +44,40 @@
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.Swagger": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerGen": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Swashbuckle.AspNetCore.SwaggerUI": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
