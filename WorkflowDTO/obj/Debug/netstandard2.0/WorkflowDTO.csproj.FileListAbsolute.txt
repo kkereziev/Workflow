@@ -1,0 +1,8 @@
+C:\Users\Krum Kereziev\Desktop\Workflow\WorkflowDTO\bin\Debug\netstandard2.0\WorkflowDTO.deps.json
+C:\Users\Krum Kereziev\Desktop\Workflow\WorkflowDTO\bin\Debug\netstandard2.0\WorkflowDTO.dll
+C:\Users\Krum Kereziev\Desktop\Workflow\WorkflowDTO\obj\Debug\netstandard2.0\WorkflowDTO.csprojAssemblyReference.cache
+C:\Users\Krum Kereziev\Desktop\Workflow\WorkflowDTO\obj\Debug\netstandard2.0\WorkflowDTO.AssemblyInfoInputs.cache
+C:\Users\Krum Kereziev\Desktop\Workflow\WorkflowDTO\obj\Debug\netstandard2.0\WorkflowDTO.AssemblyInfo.cs
+C:\Users\Krum Kereziev\Desktop\Workflow\WorkflowDTO\bin\Debug\netstandard2.0\WorkflowDTO.pdb
+C:\Users\Krum Kereziev\Desktop\Workflow\WorkflowDTO\obj\Debug\netstandard2.0\WorkflowDTO.dll
+C:\Users\Krum Kereziev\Desktop\Workflow\WorkflowDTO\obj\Debug\netstandard2.0\WorkflowDTO.pdb

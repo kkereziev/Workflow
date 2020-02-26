@@ -1,4 +1,4 @@
-namespace BackEnd.Models
+namespace WorkflowDTO
 {
     using System.ComponentModel.DataAnnotations;
 

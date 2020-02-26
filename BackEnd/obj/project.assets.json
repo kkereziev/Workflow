@@ -2740,6 +2740,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "WorkflowDTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "bin/placeholder/WorkflowDTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WorkflowDTO.dll": {}
+        }
       }
     }
   },
@@ -8627,6 +8640,11 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "WorkflowDTO/1.0.0": {
+      "type": "project",
+      "path": "../WorkflowDTO/WorkflowDTO.csproj",
+      "msbuildProject": "../WorkflowDTO/WorkflowDTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8639,7 +8657,8 @@
       "Swashbuckle.AspNetCore >= 5.0.0",
       "Swashbuckle.AspNetCore.Swagger >= 5.0.0",
       "Swashbuckle.AspNetCore.SwaggerGen >= 5.0.0",
-      "Swashbuckle.AspNetCore.SwaggerUI >= 5.0.0"
+      "Swashbuckle.AspNetCore.SwaggerUI >= 5.0.0",
+      "WorkflowDTO >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8671,7 +8690,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj": {
+              "projectPath": "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
