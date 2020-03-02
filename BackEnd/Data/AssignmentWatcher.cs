@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BackEnd.Migrations
+namespace BackEnd.Data
 {
-    public class TaskWatcher
+    public class AssignmentWatcher
     {
-        public int TaskID { get; set; }
+        public int AssignmentID { get; set; }
 
-        public Task Task { get; set; }
+        public Assignment Assignment { get; set; }
 
         public int WatcherID { get; set; }
 

@@ -1,9 +1,9 @@
-﻿namespace BackEnd.Migrations
+﻿namespace BackEnd.Data
 {
 
     using System.Collections.Generic;
 
-    public class Task : WorkflowDTO.Task
+    public class Assignment : WorkflowDTO.Assignment
     {
         public Team Team { get; set; }
 
@@ -11,6 +11,6 @@
 
         public Priority Priority { get; set; }
 
-        public virtual ICollection<TaskTag> TaskTags { get; set; }
+        public virtual ICollection<AssignmentTag> AssignmentTags { get; set; }
     }
 }

@@ -13,25 +13,29 @@ namespace BackEnd.Controllers
     [ApiController]
     public class WorkersController : ControllerBase
     {
-        private readonly ApplicationDbContext _context;
+        private readonly ApplicationDbContext _db;
 
-        public WorkersController(ApplicationDbContext context)
+        public WorkersController(ApplicationDbContext db)
         {
-            _context = context;
+            _db = db;
         }
 
         // GET: api/Workers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Worker>>> GetWorkers()
         {
-            return await _context.Workers.ToListAsync();
+            var workers = await _db.Workers.AsNoTracking()
+                .Include(c => c.CurrentWorkers)
+                .ThenInclude(c => c.Assignment)
+                .ToListAsync();
+            return workers;
         }
 
         // GET: api/Workers/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Worker>> GetWorker(int id)
         {
-            var worker = await _context.Workers.FindAsync(id);
+            var worker = await _db.Workers.FindAsync(id);
 
             if (worker == null)
             {
@@ -52,11 +56,11 @@ namespace BackEnd.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(worker).State = EntityState.Modified;
+            _db.Entry(worker).State = EntityState.Modified;
 
             try
             {
-                await _context.SaveChangesAsync();
+                await _db.SaveChangesAsync();
             }
             catch (DbUpdateConcurrencyException)
             {
@@ -79,8 +83,8 @@ namespace BackEnd.Controllers
         [HttpPost]
         public async Task<ActionResult<Worker>> PostWorker(Worker worker)
         {
-            _context.Workers.Add(worker);
-            await _context.SaveChangesAsync();
+            _db.Workers.Add(worker);
+            await _db.SaveChangesAsync();
 
             return CreatedAtAction("GetWorker", new { id = worker.Id }, worker);
         }
@@ -89,21 +93,21 @@ namespace BackEnd.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Worker>> DeleteWorker(int id)
         {
-            var worker = await _context.Workers.FindAsync(id);
+            var worker = await _db.Workers.FindAsync(id);
             if (worker == null)
             {
                 return NotFound();
             }
 
-            _context.Workers.Remove(worker);
-            await _context.SaveChangesAsync();
+            _db.Workers.Remove(worker);
+            await _db.SaveChangesAsync();
 
             return worker;
         }
 
         private bool WorkerExists(int id)
         {
-            return _context.Workers.Any(e => e.Id == id);
+            return _db.Workers.Any(e => e.Id == id);
         }
     }
 }

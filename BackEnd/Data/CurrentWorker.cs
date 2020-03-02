@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BackEnd.Migrations
+namespace BackEnd.Data
 {
     public class CurrentWorker
     {
-        public int TaskID { get; set; }
+        public int AssignmentID { get; set; }
 
-        public Task Task { get; set; }
+        public Assignment Assignment { get; set; }
 
         public int WorkerID { get; set; }
 

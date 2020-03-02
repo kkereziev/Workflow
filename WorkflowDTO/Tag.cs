@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WorkflowDTO
 {
-    public class Tags
+    public class Tag
     {
         public int ID { get; set; }
 

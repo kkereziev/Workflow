@@ -7,6 +7,6 @@
         [Required]
         public Team Team { get; set; }
 
-        public virtual ICollection<Task> Tasks { get; set; }
+        public virtual ICollection<Assignment> Tasks { get; set; }
     }
 }

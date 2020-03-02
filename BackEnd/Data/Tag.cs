@@ -4,6 +4,6 @@
 
     public class Tag : WorkflowDTO.Tag
     {
-        public virtual ICollection<TaskTag> TaskTags { get; set; }
+        public virtual ICollection<AssignmentTag> AssignmentTags { get; set; }
     }
 }

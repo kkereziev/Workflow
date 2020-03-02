@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace BackEnd.Migrations
+namespace BackEnd.Data
 {
     public class Team : WorkflowDTO.Team
     {
@@ -10,7 +10,7 @@ namespace BackEnd.Migrations
 
         public virtual ICollection<Worker> Workers { get; set; }
 
-        public virtual ICollection<Task> Tasks { get; set; }
+        public virtual ICollection<Assignment> Assignments { get; set; }
 
         public virtual ICollection<TeamWatcher> TeamWatchers { get; set; }
     }

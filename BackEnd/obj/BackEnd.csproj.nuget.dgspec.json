@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj": {}
+    "C:\\Users\\admin\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj": {
+    "C:\\Users\\admin\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj",
         "projectName": "BackEnd",
-        "projectPath": "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj",
-        "packagesPath": "C:\\Users\\Krum Kereziev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\BackEnd\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Desktop\\Workflow\\BackEnd\\BackEnd.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\Workflow\\BackEnd\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Krum Kereziev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -30,8 +30,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj": {
-                "projectPath": "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj"
+              "C:\\Users\\admin\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj": {
+                "projectPath": "C:\\Users\\admin\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj"
               }
             }
           }
@@ -60,6 +60,12 @@
               "version": "[3.1.1, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[3.1.1, )"
             },
@@ -106,20 +112,20 @@
         }
       }
     },
-    "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj": {
+    "C:\\Users\\admin\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj",
+        "projectUniqueName": "C:\\Users\\admin\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj",
         "projectName": "WorkflowDTO",
-        "projectPath": "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj",
-        "packagesPath": "C:\\Users\\Krum Kereziev\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Krum Kereziev\\Desktop\\Workflow\\WorkflowDTO\\obj\\",
+        "projectPath": "C:\\Users\\admin\\Desktop\\Workflow\\WorkflowDTO\\WorkflowDTO.csproj",
+        "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\admin\\Desktop\\Workflow\\WorkflowDTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Krum Kereziev\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -143,6 +149,26 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
